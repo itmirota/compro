@@ -1,0 +1,58 @@
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    min-height: 200px;
+}
+
+.box{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgb(146, 147, 148);
+}
+
+.btn-blue{
+  background:rgba(17,85,131,1);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px rgb(146, 147, 148);
+}
+
+.btn-red{
+  background:rgb(173, 8, 8);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px rgb(146, 147, 148);
+}
+
+.btn-red:hover{
+  color:rgb(173, 8, 8);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgb(146, 147, 148);
+}
+
+.btn-blue:hover{
+  background:#FFF;
+  color: rgba(17,85,131,1);
+  box-shadow: 0px 0px 10px 0px rgb(146, 147, 148);
+}
+
+.box.box-blue {
+border-top-color:rgba(17,85,131,1);
+}
+
+.dashboard-icon{
+  font-size: 40px;
+  color: rgba(17,85,131,1);
+}
+
+.title-pengunjung{
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.pengunjung{
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
