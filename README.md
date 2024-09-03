@@ -1,3 +1,4 @@
-SISTEM ASET MIROTA KSM
+# Website Company Profile PT. Mirota KSM
+## mirota.id
 
-V.01.0 - 19 03 2024
+updated 03/09/2024
