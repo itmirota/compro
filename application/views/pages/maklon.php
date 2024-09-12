@@ -1,16 +1,12 @@
 <section class="pages">
-  <div class="container py-4 maklon">
-
-    <div class="header-pages">
+  <div class="container header-image">
       <div class="image-header d-none d-md-block" style="background: url(<?php echo base_url().'assets/landingpage/images/produksi.webp'?>); background-repeat: no-repeat; background-size:cover ;background-position: center;"></div>
-    </div>
-    
-    <div class="header-desc">
-        <h2>Maklon PT. Mirota KSM</h2>
-        <p><span>PT Mirota KSM</span> merupakan perusahaan yang sudah berdiri sejak tahun 1972. Perusahaan kami memiliki fasilitas untuk kustomisasi produk sesuai dengan spesifikasi yang diinginkan tanpa harus memiliki pabrik dan mengurus hal-hal terkait perizinan secara pribadi karena PT Mirota KSM akan memfasilitasi hal tersebut.</p>
-    </div>
-
-
+      <div class="text-block d-none d-md-block">
+          <h2><strong>Maklon Mirota KSM</strong></h2>
+          <p><span>PT Mirota KSM</span> memiliki fasilitas untuk kustomisasi produk sesuai dengan spesifikasi yang diinginkan tanpa harus memiliki pabrik dan mengurus hal-hal terkait perizinan secara pribadi.</p>
+      </div>
+  </div>
+  <div class="container maklon">
     <div class="row why-us">
       <h2 class="header-text">Mengapa Memilih Kami?</h2>
       <div class="col-md-6 mb-4">

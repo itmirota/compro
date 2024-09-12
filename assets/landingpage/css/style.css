@@ -25,6 +25,47 @@ body{
 
 /* ==========================HOME================================== */
 
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 4px solid rgba(0,74,173,1);
+  box-shadow: 0 2px 4px 0 rgba(0,74,173,1);
+
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+/* Container holding the image and the text */
+.header-image {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 0px;
+  top:0px;
+  left:12px;
+  background-color: rgba(0,74,173,0.5);
+  color: white;
+  border-radius: 15px 0 0 15px;
+  padding: 20vh 50px;
+  width: 40%;
+}
+
 /* .carousel-inner{
     border-radius: 0 0 50% 50%/0 0 15% 15%;
 } */
@@ -619,6 +660,13 @@ a{
   /* .header-produk{
     margin-bottom: 5%;
   } */
+
+  .judul-produk{
+    font-size: 18px;
+    color: rgba(0,74,173,1);
+    font-weight: 600;
+  }
+
 
   /* .produk{
     background-color: rgba(0,74,173,1);
@@ -1262,9 +1310,6 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   justify-content: center;
 }
 
-.info-produk{
-  margin-bottom: 10%;
-}
 
 .info-produk .card{
   height: 200px;

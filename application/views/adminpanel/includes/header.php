@@ -152,6 +152,13 @@
               </a>
             </li>
             <?php } ?>
+
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>dataproduk">
+                <i class="fa fa-file-text"></i>
+                <span>Data Produk</span>
+              </a>
+            </li>
           
             <?php if($role == ROLE_ADMIN) { ?>
             <li class="header">User Management</li>

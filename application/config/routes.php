@@ -48,6 +48,9 @@ $route['datalowongan'] = 'karir/datalowongan';
 $route['dataartikel'] = 'artikel/listArtikel';
 $route['editartikel/(:num)'] = 'artikel/detail/$1';
 
+$route['dataproduk'] = 'produk/listProduk';
+$route['tambahProduk'] = 'produk/saveProduk';
+
 $route['artikel/(:any)'] = 'home/getArtikel/$1';
 
 $route['tambahKategori'] = 'artikel/saveKategori';

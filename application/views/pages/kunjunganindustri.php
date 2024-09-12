@@ -36,26 +36,14 @@
 
 
 <section class="pages">
-  <div class="container py-4 kunjunganindustri">
-    <div class="header-pages">
+  <div class="container header-image">
       <div class="image-header d-none d-md-block" style="background: url(<?php echo base_url().'assets/landingpage/images/fotobersama.webp'?>); background-repeat: no-repeat; background-size:cover ;background-position: center;"></div>
-    </div>
-
-    <div class="body-pages" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-      <div class="row">
-        <div class="col-md-6">
-          <div >
-            <img class="content-image" src="assets/landingpage/images/kunjunganindustri.webp" srcset="">
-          </div>
-        </div>
-        <div class="col-md-6 mt-4">
-          <h2 class="header-text">Sumbangsih Dalam Dunia Pendidikan</h2>
-          <p class="paragraf">
-            <span>Mirota KSM</span> memberikan kesempatan kepada siswa/mahasiswa untuk dapat mengenal secara langsung tentang bagaimana dunia usaha, dunia industri dan dunia kerja.
-          </p>
-        </div>
+      <div class="text-block d-none d-md-block">
+          <h2><strong>Sumbangsih Dalam Dunia Pendidikan</strong></h2>
+          <p><span>Mirota KSM</span> memberikan kesempatan kepada siswa/mahasiswa untuk dapat mengenal secara langsung tentang bagaimana dunia usaha, dunia industri dan dunia kerja.</p>
       </div>
-    </div>
+  </div>
+  <div class="container py-4 kunjunganindustri">
     
     <div class="survey-kepuasan d-sm-block d-md-none d-lg-none" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
       <div class="row text-survey">

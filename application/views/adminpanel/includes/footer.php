@@ -60,7 +60,7 @@
       } );
 
   ClassicEditor
-      .create( document.querySelector( '#artikel-add' ) )
+      .create( document.querySelector( '#artikel-add, #deskripsi_produk' ) )
       .catch( error => {
           console.error( error );
       } );

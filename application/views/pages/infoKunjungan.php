@@ -2,6 +2,15 @@
   <div class="container" style="padding-top:100px; min-height:80vh">
     <div class="card">
       <div class="card-body p-4">
+      <div class="alert alert-success" role="alert">
+          <h2><strong>INFORMASI</strong></h2>
+          <p class="m-0 mb-3">Selamat datang pada sesi lapangan, saat ini kita akan berkeliling di pabrik <strong>PT. Mirota KSM</strong></p> 
+          <p class="m-0 mb-3">1. tekan tombol  <strong>izin akses kamera</strong> pada tombol dibawah informasi ini, maka akan muncul notifikasi kemudian pilih izinkan</p>
+          <p class="m-0 mb-3">2. pilih kamera <strong>(camera2 0, facing back)</strong> untuk dapat mengakses kamera belakang. Kemudian tekan Mulai Scan</p>
+          <p class="m-0 mb-3">3. arahkan kamera ke spot barcode yang telah kami sediakan.</p>
+          <p class="m-0 mb-3">4. jika visit sudah selesai, mohon dapat meluangkan waktunya untuk mengisi kuisioner yang telah kami siapkan dengan cara <a href="<?= base_url('kuisioner-kunjungan')?>" target="_blank">klik tulisan ini</a>, sebagai bahan evaluasi kami kedepannya.</p>
+          <p class="m-0 mb-3">5. terimakasih telah mempercayai <strong>PT. Mirota KSM</strong> sebagai sarana belajar teman-teman.</p>
+        </div>
         <div class="d-flex justify-content-center">
             <div class="col-md-6" id="scanbarcode">
               <!-- <div style="width:100%;" id="reader"></div> -->

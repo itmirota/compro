@@ -28,29 +28,6 @@
   margin-top: -2px;
   margin-left: 10px;
 }
-
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.separator::before,
-.separator::after {
-  content: '';
-  flex: 1;
-  border-bottom: 4px solid rgba(0,74,173,1);
-  box-shadow: 0 2px 4px 0 rgba(0,74,173,1);
-
-}
-
-.separator:not(:empty)::before {
-  margin-right: .25em;
-}
-
-.separator:not(:empty)::after {
-  margin-left: .25em;
-}
 </style>
 
 <!--CAROUSEL DESKTOP-->

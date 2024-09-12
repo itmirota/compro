@@ -10,23 +10,15 @@
         </div>
     </div>
 
-    <div class="header-pages">
+    <div class="container header-image">
       <div class="image-header d-none d-md-block" style="background: url(<?php echo base_url().'assets/landingpage/images/karir.webp'?>); background-repeat: no-repeat; background-size:cover ;background-position: center;"></div>
-    </div>
-    
-    <div class="header-karir">
-      <div class="row">
-        <div class="col-md-6">
-        <h2 class="header-text">Bersiap untuk membangkan Potensi Terbaikmu Bersama Mirota KSM?</h2>
-          
-        </div>
-        <div class="col-md-6">
-          <p class="paragraf">Kami sangat bangga dengan potensi Anda yang bertalenta dan memiliki latar belakang profesional dan mau berkembang bersama kami. Mari gabung bersama kami.</p>
-        </div>
+      <div class="text-block d-none d-md-block">
+          <h2><strong>Kembangkan Potensi Terbaikmu</strong></h2>
+          <p><span>Mirota KSM</span> sangat bangga dengan potensimu yang bertalenta dan memiliki latar belakang profesional dan mau berkembang bersama kami. Mari gabung bersama kami.</p>
       </div>
     </div>
     
-    <div class="row lowongan">
+    <div class="row lowongan mt-4">
     <h2 class="header-text mb-4">Lowongan Pekerjaan</h2>
 
       <?php  
