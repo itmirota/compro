@@ -27,7 +27,7 @@ class Home extends BaseController
         $this->global['pageTitle'] = 'Mirota KSM | Home';
         
         $ip    = $this->input->ip_address(); // Mendapatkan IP user
-        $ipdat = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
+        // $ipdat = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
         // $region = $ipdat->geoplugin_city;
         $date  = date("Y-m-d"); // Mendapatkan tanggal sekarang
         $waktu = time(); //
