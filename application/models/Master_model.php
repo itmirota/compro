@@ -3,9 +3,9 @@
 class Master_model extends CI_Model
 {
     function getPengunjungWeb(){
-        $this->db->select('COUNT(ip) as countIp, date');
+        $this->db->select('COUNT(ip) as countIp, date, MONTH(date) as bulan');
         $this->db->from('visitor');
-        $this->db->group_by('DAY(date)');
+        $this->db->group_by('MONTH(date)');
         $query = $this->db->get();
 
         return $query->result();

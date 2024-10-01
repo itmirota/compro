@@ -61,16 +61,6 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="file" class="form-control" name="file_ijazah" id="file_ijazah" required>
-                        <label for="floatingInput">Ijazah(pdf)</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="file" class="form-control" name="file_ktp" id="file_ktp" required>
-                        <label for="floatingInput">KTP(pdf)</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
                         <input type="file" class="form-control" name="file_lampiran" id="file_lampiran">
                         <label for="floatingInput">lampiran pendukung(pdf) (optional)</label>
                     </div>

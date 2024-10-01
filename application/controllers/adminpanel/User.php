@@ -33,6 +33,10 @@ class User extends BaseController
         $date  = date("Y-m-d"); // Mendapatkan tanggal sekarang
         $data['pengunjunghariini']= $this->visitor_model->GetVisitorToday($date);  // Hitung jumlah pengunjung
 
+
+        $date  = date("m"); // Mendapatkan bulan sekarang
+        $data['pengunjungbulanini']= $this->visitor_model->GetVisitorByMonth($date);  // Hitung jumlah pengunjung
+
         $visitor = $this->visitor_model->CountVisitor();
         $data['totalpengunjung']= isset($visitor->hits)?($visitor->hits):0; // hitung total pengunjung
 
@@ -41,12 +45,21 @@ class User extends BaseController
         
         $data['jumlahlowongan'] = COUNT($this->master_model->GetdataLowongan());
         $data['totalpelamar'] = COUNT($this->master_model->GetDataPelamar());
+
+        $tahun = $this->input->post('tahun');
+        if(empty($tahun)){
+        $data['data_pengunjung'] = $this->visitor_model->GetVisitorByYear(DATE('Y'));
+        }else{
+        $data['data_pengunjung'] = $this->visitor_model->GetVisitorByYear($tahun);
+        $data['tahun'] = $tahun;
+        }
         
         $this->loadViews("adminpanel/dashboard", $this->global , $data , NULL);
     }
     
-    function getChart(){
-        $list_data  = $this->master_model->getPengunjungWeb();
+    function getChart($tahun = NULL){
+        
+        $list_data  = $this->visitor_model->GetVisitorByYear(DATE('Y'));
         
         echo json_encode($list_data);
     }

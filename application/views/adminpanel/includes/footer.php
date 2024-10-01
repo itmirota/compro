@@ -86,7 +86,7 @@
 		<?php } ?>
 
     // .DATATABLE 
-    var table = $('#karantina, #release, #datakeluar').DataTable( {
+    var table = $('#karantina, #release, #datakeluar, #datatable').DataTable( {
         lengthChange: true,
         paging   : true,
         info   : true,

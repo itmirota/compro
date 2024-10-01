@@ -48,5 +48,25 @@ class Visitor_model extends CI_Model{
       $query = $this->db->get();
       return $query->num_rows();
   }
+
+  function GetVisitorByMonth($date){
+    $this->db->select('*');
+    $this->db->from('visitor');
+    $this->db->where('MONTH(date)',$date);
+    // $this->db->group_by('ip');
+
+    $query = $this->db->get();
+    return $query->num_rows();
+  }
+
+  function GetVisitorByYear($tahun){
+    $this->db->select('COUNT(ip) as countIp, date, MONTH(date) as bulan');
+    $this->db->from('visitor');
+    $this->db->where('YEAR(date)',$tahun);
+    $this->db->group_by('MONTH(date)');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
   
 }

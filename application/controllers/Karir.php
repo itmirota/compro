@@ -190,16 +190,6 @@ class Karir extends BaseController
                 $file_cv = $file_cv['file_name'];
             }
 
-            if($this->upload->do_upload('file_ijazah')){
-                $file_ijazah = $this->upload->data();
-                $file_ijazah = $file_ijazah['file_name'];
-            }
-
-            if($this->upload->do_upload('file_ktp')){
-                $file_ktp = $this->upload->data();
-                $file_ktp = $file_ktp['file_name'];
-            }
-
             if($this->upload->do_upload('file_lampiran')){
                 $file_lampiran = $this->upload->data();
                 $file_lampiran = $file_lampiran['file_name'];
@@ -222,8 +212,6 @@ class Karir extends BaseController
                 'no_wa' => $no_wa,
                 'file_surat' => $file_surat,
                 'file_cv' => $file_cv,
-                'file_ijazah' => $file_ijazah,
-                'file_ktp' => $file_ktp,
                 'file_lampiran' => $file_lampiran,
                 'datecreated' => DATE('Y-m-d H:i:s'),
             );
