@@ -50,6 +50,10 @@
       z-index: 1;
       opacity: 0.8;
     }
+
+    .logo{
+      display:none;
+    }
   </style>
 
   </head>
@@ -59,7 +63,7 @@
     <div class="main">
       <nav class="navBar z-3">
          <div class="con">
-             <div class="logo ld ld-bounce-in">
+             <div class="logo ld ld-bounce-in" id="logo">
                <a href="<?php echo base_url()?>">
                   <img class="img-logo" src="<?php echo base_url().'assets/landingpage/image/logo-mirota.png'?>" alt="" srcset="">
                </a>

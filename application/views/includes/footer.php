@@ -141,8 +141,10 @@
             if ($(document).scrollTop() > 50) {
                 $('.navBar').addClass('affix');
                 $('.logo').addClass('affixlogo');
+                document.getElementById("logo").style.display = "block";
                 console.log("OK");
             } else {
+                document.getElementById("logo").style.display = "none";
                 $('.navBar').removeClass('affix');
                 $('.logo').addClass('affixlogo');
             }
