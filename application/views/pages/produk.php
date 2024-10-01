@@ -25,9 +25,9 @@
         <h2 class="separator header-text mt-4 mb-4">PRODUK KAMI</h2>
         <div class="body-produk" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
             <!-- <h2 class="separator header-text mb-4 mt-4">PRODUK MIROTA</h2> -->
-            <div class="d-flex flex-wrap justify-content-center">
             <div class="owl-carousel owl-theme">
                 <?php foreach ($list_data as $ld) { ?>
+                  <div class="d-flex flex-wrap justify-content-center">
                     <div class="d-flex flex-column align-items-center" style="width:200px">
                         <button style="border:none;background:none" onclick="openCity(event, <?= $ld->id_produk ?>)">
                         <img src="<?= base_url().'assets/landingpage/images/produk/'.$ld->gambar_produk?>" alt="Lactona Ibu" style="width:100%;height:auto">
@@ -35,8 +35,8 @@
                         <h1 class="judul-produk m-0"><?= $ld->nama_produk?></h1>
                         <h3 class="subjudul text-center m-0" style="font-size:12px"><?= $ld->keterangan_produk?></h3>
                     </div>
+                  </div>
                 <?php } ?>
-            </div>
             </div>
 
             <?php foreach ($list_data as $ld) { ?>
