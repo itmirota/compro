@@ -356,11 +356,17 @@ class Kunjunganindustri extends BaseController
   public function infoKunjungan(){
     $this->global['pageTitle'] = 'Mirota KSM | Info Kunjungan Industri';
 
+    $id = $this->uri->segment(2);
+
+    $where = array(
+      'id_info' => $id
+    );
+
     $data = array(
-      'list_data' => $this->crud_model->tampildata('tbl_infoKunjungan'),
+      'info_gudang' => $this->crud_model->GetDataByWhere($where,'tbl_infoKunjungan'),
     );
     
-    $this->loadPageViews("pages/infoKunjungan", $this->global ,$data , NULL);
+    $this->loadPageViews("pages/infoKunjungan", $this->global,$data,NULL);
   }
 
   public function listInfo(){

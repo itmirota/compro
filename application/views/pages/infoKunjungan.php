@@ -2,7 +2,7 @@
   <div class="container" style="padding-top:100px; min-height:80vh">
     <div class="card">
       <div class="card-body p-4">
-      <div class="alert alert-success" role="alert">
+        <!-- <div class="alert alert-success" role="alert">
           <h2><strong>INFORMASI</strong></h2>
           <p class="m-0 mb-3">Selamat datang pada sesi lapangan, saat ini kita akan berkeliling di pabrik <strong>PT. Mirota KSM</strong></p> 
           <p class="m-0 mb-3">1. tekan tombol  <strong>izin akses kamera</strong> pada tombol dibawah informasi ini, maka akan muncul notifikasi kemudian pilih izinkan</p>
@@ -13,20 +13,22 @@
         </div>
         <div class="d-flex justify-content-center">
             <div class="col-md-6" id="scanbarcode">
-              <!-- <div style="width:100%;" id="reader"></div> -->
               <div id="reader" width="600px"></div>
             </div>
-        </div>
-        <div id="info-kunjungan">
-          <button class="btn btn-primary mb-4" onclick="scanbarcode()"><i class="fa fa-magnifying-glass"></i> scan lokasi lainnya</button>
-          <h1 class="header-text text-center" id="judul_info"></h1>
+        </div> -->
+        <div>
+          <!-- <button class="btn btn-primary mb-4" onclick="scanbarcode()"><i class="fa fa-magnifying-glass"></i> scan lokasi lainnya</button> -->
+          <?php foreach ($info_gudang as $d) {?>
+          <h1 class="header-text text-center" id="judul_info"><?= $d->judul_info?></h1>
           <div class="d-flex justify-content-center mb-4">
           <video controls style="border:10px; border-radius:15px; box-shadow: 1px 1px 4px #004aad, 0 0 5px #004aad;" width="100%" id="video_info">
+          <source src="<?= site_url("assets/video_kunjungan/").$d->video_info?>" type="video/mp4" />
           </video>
           </div>
           <div class="d-flex justify-content-center">
-            <div class="deskripsi-info" id="deskripsi"></div>
+            <div class="deskripsi-info" id="deskripsi"><?= $d->deskripsi?></div>
           </div>
+          <?php }?>
         </div>
       </div>
     </div>
@@ -42,7 +44,6 @@ let html5QrcodeScanner = new Html5QrcodeScanner(
 html5QrcodeScanner.render(onScanSuccess, onScanError);
 
 function onScanSuccess(qrCodeMessage) {
-  alert(qrCodeMessage);
   if(qrCodeMessage == 'kuisioner-kunjungan'){
     kuisioner();
   }else{
