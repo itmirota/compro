@@ -139,7 +139,11 @@
     </div>
   </div>
 </section>
-<script src="<?= base_url(); ?>assets/js/jQuery-3.2.1.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+
 <script>
     $(document).ready(function(){
         $("#id_kabupaten").hide();
@@ -148,58 +152,30 @@
     });
 
     function loadkabupaten(){
-        $("#id_provinsi").change(function(){
-            var getprovinsi = $("#id_provinsi").val(); 
+    $("#id_provinsi").change(function(){
+        var getprovinsi = $("#id_provinsi").val(); 
 
-            $.ajax({
-                type : "POST",
-                dataType : "JSON",
-                url :  "<?= base_url(); ?>Kunjunganindustri/getdatakabupaten",
-                data : {provinsi : getprovinsi},
-                success : function(data){
-                    console.log(data);
+        $.ajax({
+            type : "POST",
+            dataType : "JSON",
+            url :  "<?= base_url(); ?>Kunjunganindustri/getdatakabupaten",
+            data : {provinsi : getprovinsi},
+            success : function(data){
+                console.log(data);
 
-                    var html = ' ';
-                    var i;
-                    for ( i=0; i < data.length ; i++){
-                         
-                        html += 
-                        '<option value="'+ data[i].city_id +'">'+ data[i].city_name +'</option>';
-                    }
-                    $("#id_kabupaten").html(html);
-                    $("#id_kabupaten").show();
+                var html = ' ';
+                var i;
+                for ( i=0; i < data.length ; i++){
+                        
+                    html += 
+                    '<option value="'+ data[i].city_id +'">'+ data[i].city_name +'</option>';
                 }
-
-            });
+                $("#id_kabupaten").html(html);
+                $("#id_kabupaten").show();
+            }
 
         });
-    } 
 
-        function loadkabupaten(){
-        $("#id_provinsi").change(function(){
-            var getprovinsi = $("#id_provinsi").val(); 
-
-            $.ajax({
-                type : "POST",
-                dataType : "JSON",
-                url :  "<?= base_url(); ?>Kunjunganindustri/getdatakabupaten",
-                data : {provinsi : getprovinsi},
-                success : function(data){
-                    console.log(data);
-
-                    var html = ' ';
-                    var i;
-                    for ( i=0; i < data.length ; i++){
-                         
-                        html += 
-                        '<option value="'+ data[i].city_id +'">'+ data[i].city_name +'</option>';
-                    }
-                    $("#id_kabupaten").html(html);
-                    $("#id_kabupaten").show();
-                }
-
-            });
-
-        });
+    });
     } 
 </script>
