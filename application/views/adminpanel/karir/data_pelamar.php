@@ -133,13 +133,11 @@
           $file_surat = $obj.file_surat;
           $file_cv = $obj.file_cv;
           $file_ijazah = $obj.file_ijazah;
-          $file_ktp = $obj.file_ktp;
           $file_lampiran = $obj.file_lampiran;
 
           var $file_surat = "<?= site_url("assets/dokumen_pelamar")?>/" + $file_surat;
           var $file_cv = "<?= site_url("assets/dokumen_pelamar")?>/" + $file_cv;
           var $file_ijazah = "<?= site_url("assets/dokumen_pelamar")?>/" + $file_ijazah;
-          var $file_ktp = "<?= site_url("assets/dokumen_pelamar")?>/" + $file_ktp;
           var $file_lampiran = "<?= site_url("assets/dokumen_pelamar")?>/" + $file_lampiran;
 
           var html = ' ';
@@ -155,11 +153,6 @@
           '<label class="mb-4">File Ijazah</label>';
           html += 
           '<embed type="application/pdf" src="'+ $file_ijazah +'" width="850" height="400"></embed>';
-          html += 
-          '<label class="mb-4">File KTP</label>';
-          html += 
-          '<embed type="application/pdf" src="'+ $file_ktp +'" width="850" height="400"></embed>';
-
           
           if($obj.file_lampiran != ""){
           html += 
