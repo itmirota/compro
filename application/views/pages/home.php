@@ -103,49 +103,26 @@
   </div>
 </section> -->
 
-<section class="artikel">
- <div class="container">
- <h2 class="separator header-text">ARTIKEL</h2>
- <div class="owl-carousel owl-theme">
-      <?php foreach($artikel as $a){?>
-      <div class="d-flex justify-content-center">
-        
-        <div class="card card-artikel" data-aos="fade-up" data-aos-duration="2000">
-          <a href="<?= base_url('artikel/'.$a->slug)?>">
-          <img src="<?= base_url('assets/images/artikel/').$a->gambar_artikel?>" class="card-img-artikel" alt="<?=$a->gambar_artikel?>">
-          </a>
-          <div class="card-body p-0">
-            <a href="<?= base_url('artikel/'.$a->slug)?>">
-            <h5 class="judul-artikel-preview"><?= $a->judul_artikel ?></h5>
-            </a>
-            <div class="text-artikel-preview mb-2">
-              <?= $a->artikel ?>
-            </div>
-          </div>
-        </div>
-     </div>
-     <?php } ?>
- </div>
- </div>
-</section>
-
 <section class="CTA" id="sejarah">
   <div class="container"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
 
     <div class="header-desc">
-      <h2 class="separator mb-4">sejarah Mirota</h2>
+      <!-- <h2 class="separator mb-4">sejarah Mirota</h2> -->
       <div class="d-flex flex-wrap">
-        <div class="p-2 d-flex align-items-center col-md-6">
+        <!-- <div class="p-2 d-flex align-items-center col-md-6">
           <img src="assets/landingpage/images/mirota-dulu.webp" alt="Gedung mirota ksm jaman dulu" srcset="">
-        </div>
-        <div class="p-4 d-flex align-items-center col-md-6">
+        </div> -->
+        <div class="p-4 d-flex align-items-center col-md-8">
           <div class="about">
-            <h3 class="subjudul">Tentang Mirota</h3>
-            <h3 class="judul">50 Tahun Lebih Ikut Serta Dalam Mencerdasakan Bangsa</h3>
+            <!-- <h3 class="subjudul">Tentang Mirota</h3> -->
+            <h3 class="judul">Lebih dari 50 Tahun Turut Serta Dalam Mencerdasakan Bangsa</h3>
             <p style="text-align:justify; font-size:16px">PT Mirota KSM merupakan perusahaan industri susu bubuk di Indonesia yang didirikan pada tahun <span>1973</span> oleh ibu <span>Tini Yuniarti</span> dan Bapak <span>Hendro Sutikno</span> beserta keluarga.</p>
             <p style="text-align:justify; font-size:16px">Dengan visi perusahaan "Menjadi perusahaan produsen susu formula yang unggul di Indonesia dan menjadi perusahaan yang bermanfaat bagi masyaraka".</p>
-            <a href="<?php echo base_url('tentangkami')?>" class="btn-header-cta">TENTANG KAMI</a>
+            <a href="<?php echo base_url('tentangkami')?>" class="subjudul">Berkenalan dengan mirota ksm <i class="fa fa-angles-right"></i></a>
           </div>
+        </div>
+        <div class="d-flex align-items-center col-md-4">
+          <img src="assets/landingpage/images/mirota-dulu.webp" alt="Gedung mirota ksm jaman dulu" srcset="">
         </div>
       </div>
     </div>
@@ -171,4 +148,30 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="artikel">
+ <div class="container">
+ <h2 class="separator header-text">ARTIKEL</h2>
+ <div class="owl-carousel owl-theme">
+      <?php foreach($artikel as $a){?>
+      <div class="d-flex justify-content-center">
+        
+        <div class="card card-artikel" data-aos="fade-up" data-aos-duration="2000">
+          <a href="<?= base_url('artikel/'.$a->slug)?>">
+          <img src="<?= base_url('assets/images/artikel/').$a->gambar_artikel?>" class="card-img-artikel" alt="<?=$a->gambar_artikel?>">
+          </a>
+          <div class="card-body p-0">
+            <a href="<?= base_url('artikel/'.$a->slug)?>">
+            <h5 class="judul-artikel-preview"><?= $a->judul_artikel ?></h5>
+            </a>
+            <div class="text-artikel-preview mb-2">
+              <?= $a->artikel ?>
+            </div>
+          </div>
+        </div>
+     </div>
+     <?php } ?>
+ </div>
+ </div>
 </section>
