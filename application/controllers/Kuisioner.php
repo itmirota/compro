@@ -55,16 +55,8 @@ class Kuisioner extends BaseController
 
   public function kuisionerKunjungan(){
     $this->global['pageTitle'] = 'Mirota KSM | Kuisioner Kunjungan';
-    $datenow = DATE('Y-m-d');
 
-    $kunjungan = $this->crud_model-> GetDataByDate('tgl_kunjungan', $datenow, 'tbl_kunjungan_industri');
-
-    $data = array(
-      'id_kunjungan' => $kunjungan->id_kunjungan,
-      'nama_instansi' => $kunjungan->instansi
-    );
-
-    $this->loadPageViews("kuisioner/kunjunganindustri", $this->global, $data, NULL);
+    $this->loadPageViews("kuisioner/kunjunganindustri", $this->global, NULL);
   }
 
   public function LaporanKuisionerKunjungan(){
@@ -78,7 +70,7 @@ class Kuisioner extends BaseController
   }
 
   public function saveKuisionerKunjungan(){
-    $kunjungan_id = $this->input->post('kunjungan_id');
+    $instansi = $this->input->post('instansi');
     $nama = $this->input->post('nama');
     $no_hp = $this->input->post('no_hp');
     $kesan = $this->input->post('kesan');
@@ -94,7 +86,7 @@ class Kuisioner extends BaseController
     $saran = $this->input->post('saran');
 
     $data = array(
-      'kunjungan_id' => $kunjungan_id,
+      'instansi' => $instansi,
       'nama' => $nama,
       'no_hp' => $no_hp,
       'jawaban' => $kesan.'|'.$poin_menarik.'|'.$interaksi_tim.'|'.$kesesuaian_materi.'|'.$pengetahuan_mirota.'|'.$pengetahuan_produk.'|'.$konsumsi_produk.'|'.$kegiatan_aula.'|'.$kegiatan_pabrik.'|'.$freedrink.'|'.$saran

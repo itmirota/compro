@@ -8,8 +8,7 @@
                 <label class="mb-4" for="kunjungan_id"><b>Kuisioner Kunjungan Industri</b></label>
                 <div class="alert alert-success" role="alert">
                   
-                  <p class="m-0 text-center mb-3">Terimakasih kami ucapkan atas partisipasi</p> 
-                  <p class="m-0 text-center mb-3"><strong><?= $nama_instansi ?></strong></p>
+                  <p class="m-0 text-center mb-3">Terimakasih kami ucapkan atas partisipasi</p>
                   <p class="m-0 text-center mb-3"> yang telah mengikuti kunjungan industri pada hari ini,</p>
                   <p class="m-0 text-center mb-3">kami meminta kesediaannya untuk dapat mengisi kuisioner yang telah kami siapkan, </p>
                   <p class="m-0 text-center mb-3">yang nantinya akan kami jadikan sebagai bahan evaluasi guna meningkatkan pelayanan kunjungan industri. </p>
@@ -17,6 +16,15 @@
                 </div>
               <div class="form-group mb-3">
                   <input type="hidden" class="form-control-plaintext" name="kunjungan_id" value="<?= $id_kunjungan ?>">
+              </div>
+            </div>
+          </div>
+
+          <div class="card m-4">
+            <div class="card-body">
+              <div class="form-group mb-3">
+                  <label class="mb-4" for="instansi"><b>Asal Instansi</b></label>
+                  <input type="text" class="form-control" name="instansi" placeholder="masukkan nama instansi disini" required>
               </div>
             </div>
           </div>
