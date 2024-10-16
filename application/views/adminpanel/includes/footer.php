@@ -94,6 +94,15 @@
         ordering: false,
     } );
     // ./DATATABLE 
+
+        // .DATATABLE 
+        var table = $('#datatableScrollX').DataTable( {
+        scrollX: true,
+    } );
+    // ./DATATABLE 
+
+    new DataTable('#myTable', {
+});
     
       $('.btn-delete').on('click',function(){
           var getLink = $(this).attr('href');

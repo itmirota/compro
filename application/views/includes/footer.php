@@ -133,6 +133,16 @@
   		    timer: 1500
 			})
 		<?php } ?>
+
+        // .DATATABLE 
+        var table = $('#datatable').DataTable( {
+            lengthChange: true,
+            paging   : true,
+            info   : true,
+            responsive: true,
+            ordering: false,
+        } );
+        // ./DATATABLE 
     
     
     });

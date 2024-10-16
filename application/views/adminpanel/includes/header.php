@@ -139,11 +139,18 @@
             </li>
             
             <li class="treeview">
-                <a href="<?php echo base_url(); ?>list-kunjungan">
-                  <i class="fa fa-industry"></i>
-                  <span>Data info Kunjungan</span>
-                </a>
-              </li>
+              <a href="<?php echo base_url(); ?>list-kunjungan">
+                <i class="fa fa-industry"></i>
+                <span>Data info Kunjungan</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>hasil-kuisioner-kunjungan">
+                <i class="fa fa-file-text"></i>
+                <span>Data Hasil Kuisioner</span>
+              </a>
+            </li>
 
             <li class="treeview">
               <a href="<?php echo base_url(); ?>dataartikel">

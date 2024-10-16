@@ -66,6 +66,7 @@ $route['dataprodukkunjungan'] = 'kunjunganindustri/dataprodukkunjungan';
 $route['info-kunjungan'] = 'kunjunganindustri/infoKunjungan';
 $route['info-kunjungan/(:any)'] = 'kunjunganindustri/infoKunjungan/$1';
 $route['list-kunjungan'] = 'kunjunganindustri/listInfo';
+$route['hasil-kuisioner-kunjungan'] = 'kuisioner/LaporanKuisionerKunjungan';
 
 
 
