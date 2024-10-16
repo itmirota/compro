@@ -7,16 +7,11 @@
             <div class="card-body">
                 <label class="mb-4" for="kunjungan_id"><b>Kuisioner Kunjungan Industri</b></label>
                 <div class="alert alert-success" role="alert">
-                  
-                  <p class="m-0 text-center mb-3">Terimakasih kami ucapkan atas partisipasi</p>
-                  <p class="m-0 text-center mb-3"> yang telah mengikuti kunjungan industri pada hari ini,</p>
-                  <p class="m-0 text-center mb-3">kami meminta kesediaannya untuk dapat mengisi kuisioner yang telah kami siapkan, </p>
-                  <p class="m-0 text-center mb-3">yang nantinya akan kami jadikan sebagai bahan evaluasi guna meningkatkan pelayanan kunjungan industri. </p>
-                  <p class="m-0 text-center">Selamat menikmati freedrink dan snack yang sudah disediakan.</p>
+                  <p class="m-0 text-center mb-2">Terimakasih kami ucapkan atas partisipasi pada kunjungan industri pada hari ini,</p>
+                  <p class="m-0 text-center mb-2">kami meminta kesediaannya untuk dapat mengisi kuisioner yang telah kami siapkan, </p>
+                  <p class="m-0 text-center mb-2">kuisioner ini nantinya akan kami jadikan sebagai bahan evaluasi guna meningkatkan pelayanan kunjungan industri. </p>
+                  <p class="m-0 text-center">atas kesediaannya kami ucapkan terimakasih.</p>
                 </div>
-              <div class="form-group mb-3">
-                  <input type="hidden" class="form-control-plaintext" name="kunjungan_id" value="<?= $id_kunjungan ?>">
-              </div>
             </div>
           </div>
 
