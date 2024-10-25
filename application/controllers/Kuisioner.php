@@ -64,7 +64,7 @@ class Kuisioner extends BaseController
     $this->global['pageTitle'] = 'Mirota KSM | Kuisioner Kunjungan';
 
     $data = array(
-      'list_data' => $this->crud_model->tampildata('tbl_kunjungan_hasilkuisioner')
+      'list_data' => $this->crud_model->tampildata('tbl_kunjungan_hasilKuisioner')
     );
 
     $this->loadViews("kuisioner/hasilKuisionerKunjungan", $this->global, $data, NULL);
