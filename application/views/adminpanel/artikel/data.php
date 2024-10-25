@@ -54,9 +54,9 @@
                 <tr>
                   <th>No</th>
                   <th>Judul</th>
-                  <th>Kategori</th>
-                  <th>Tanggal</th>
-                  <th>Artikel</th>
+                  <th width="100px">Penulis</th>
+                  <th width="100px">Kategori</th>
+                  <th width="100px">Tanggal</th>
                   <th>Gambar Thumbnail</th>
                   <th class="text-center" >Detail</th>
                 </tr>
@@ -68,9 +68,9 @@
                 <tr>
                     <td><?=$no?></td>
                     <td><?=$ld->judul_artikel?></td>
+                    <td><?=$ld->penulis?></td>
                     <td><?=$ld->nama_kategori?></td>
                     <td><?=mediumdate_indo($ld->datecreated)?></td>
-                    <td><?=$ld->artikel?></td>
                     <td><img src="<?= base_url('assets/images/artikel/').$ld->gambar_artikel?>" alt="" srcset="" class="img-thumbnail" style="max-width:150px"></td>
                     <td class="text-center">
                     <a href="<?=base_url('editartikel/'.$ld->id_artikel)?>" type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
@@ -111,6 +111,21 @@
                     <input type="text" name="judul_artikel" class="form-control" placeholder="Masukkan Judul Artikel" required>
                     </div>
                 </div>
+
+                <div class="form-group">      
+                  <label for="slug" class="col-sm-4 control-label">Slug :</label>
+                    <div class="col-sm-3">
+                    <input type="text" name="slug" class="form-control" placeholder="Masukkan Slug Disini" required>
+                    </div>
+                </div>
+
+                <div class="form-group">      
+                  <label for="penulis" class="col-sm-4 control-label">Penulis :</label>
+                    <div class="col-sm-3">
+                    <input type="text" name="penulis" class="form-control" placeholder="Masukkan Penulis Disini" required>
+                    </div>
+                </div>
+
                 <div class="form-group">      
                   <label for="kategori" class="col-sm-4 control-label">Kategori :</label>
                     <div class="col-sm-3">
@@ -123,12 +138,19 @@
                     </div>
                 </div> 
                 <div class="form-group">  
-                  <label for="deskripsi" class="col-sm-4 control-label">Artikel :</label>
+                  <label for="deskripsi" class="col-sm-4 control-label">Gambar Artikel :</label>
                   <div class="col-sm-3">
                   <input type="file" name="gambar_artikel" class="form-control" required>
                   <span>(resolusi 700x400)</span>
                   </div>
                 </div> 
+
+                <div class="form-group">      
+                  <label for="nama_lowongan" class="col-sm-4 control-label">Credit Image :</label>
+                    <div class="col-sm-3">
+                    <input type="text" name="credit_image" class="form-control" placeholder="Masukkan Credit Disini" required>
+                    </div>
+                </div>
 
                 <div class="form-group">  
                   <label for="deskripsi" class="col-sm-4 control-label">Artikel :</label>

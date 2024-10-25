@@ -48,6 +48,9 @@ class Artikel extends BaseController
     $judul_artikel  = $this->input->post('judul_artikel');
     $kategori_id    = $this->input->post('kategori');
     $artikel        = $this->input->post('artikel');
+    $penulis        = $this->input->post('penulis');
+    $slug        = $this->input->post('slug');
+    $credit_image        = $this->input->post('credit_image');
     $createdBy      = $this->session->userdata ( 'userId' );
     $datecreated    = DATE('Y-m-d');
 
@@ -59,7 +62,9 @@ class Artikel extends BaseController
         'judul_artikel'   => $judul_artikel,
         'kategori_id'     => $kategori_id,
         'artikel'         => $artikel,
-        'slug'            => str_replace(" ","-",$judul_artikel),
+        'penulis'         => $penulis,
+        'slug'            => $slug,
+        'credit_image'    => $credit_image,
         'createdBy'       => $createdBy,
         'datecreated'     => $datecreated,
         'gambar_artikel'  => $gambar_artikel,
@@ -69,7 +74,9 @@ class Artikel extends BaseController
         'judul_artikel'   => $judul_artikel,
         'kategori_id'     => $kategori_id,
         'artikel'         => $artikel,
-        'slug'            => str_replace(" ","-",$judul_artikel),
+        'penulis'         => $penulis,
+        'slug'            => $slug,
+        'credit_image'    => $credit_image,
         'createdBy'       => $createdBy,
         'datecreated'     => $datecreated,
         'gambar_artikel'  => $gambar_artikel,

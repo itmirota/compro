@@ -11,6 +11,21 @@
               <input type="text" name="judul_artikel" id="judul_artikel" class="form-control" value="<?=$d->judul_artikel?>">
               </div>
           </div>
+
+          <div class="form-group">      
+            <label for="slug" class="col-sm-4 control-label">Slug :</label>
+              <div class="col-sm-3">
+              <input type="text" name="slug" class="form-control" value="<?=$d->slug?>">
+              </div>
+          </div>
+
+          <div class="form-group">      
+            <label for="penulis" class="col-sm-4 control-label">Penulis :</label>
+              <div class="col-sm-3">
+              <input type="text" name="penulis" class="form-control" value="<?=$d->penulis?>">
+              </div>
+          </div>
+
           <div class="form-group">      
             <label for="kategori" class="col-sm-4 control-label">Kategori :</label>
               <div class="col-sm-3">
@@ -29,6 +44,13 @@
             <span>(resolusi 700x400)</span>
             </div>
           </div> 
+
+          <div class="form-group">      
+            <label for="nama_lowongan" class="col-sm-4 control-label">Credit Image :</label>
+              <div class="col-sm-3">
+              <input type="text" name="credit_image" class="form-control" placeholder="Masukkan Credit Disini" required>
+              </div>
+          </div>
 
           <div class="form-group">  
             <label for="artikel-edit" class="col-sm-4 control-label">Artikel :</label>

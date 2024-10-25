@@ -4,8 +4,9 @@
       <div class="col-lg-9">
         <!-- konten -->
         <h1 class="judul-artikel"><?= $artikel->judul_artikel?></h1>
-        <p class="info-artikel"><?= $artikel->name.' | '. mediumdate_indo($artikel->datecreated)?></p>
-        <img src="<?= base_url('assets/images/artikel/').$artikel->gambar_artikel?>" class="img-thumbnail mb-4" style="border-radius:15px;border:none;" alt="<?= $artikel->slug?>">
+        <p class="info-artikel"><?= $artikel->penulis.' | '. mediumdate_indo($artikel->datecreated)?></p>
+        <img src="<?= base_url('assets/images/artikel/').$artikel->gambar_artikel?>" class="img-thumbnail" style="border-radius:15px;border:none;" alt="<?= $artikel->slug?>">
+        <p class="d-flex justify-content-end" style="font-size:10px"><?= $artikel->credit_image?></p>
         <div class="text-artikel"><?= $artikel->artikel?></div>
         <!-- konten -->
       </div>
