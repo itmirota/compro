@@ -103,6 +103,8 @@ class Artikel extends BaseController
   }
 
   public function detail($id){
+    $this->global['pageTitle'] = 'Mirota KSM | Edit Artikel';
+
     $this->isLoggedIn();
 
     $data['detail'] = $this->master_model->GetArtikelById($id);
