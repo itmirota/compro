@@ -48,7 +48,7 @@
           <div class="form-group">      
             <label for="nama_lowongan" class="col-sm-4 control-label">Credit Image :</label>
               <div class="col-sm-3">
-              <input type="text" name="credit_image" class="form-control" placeholder="Masukkan Credit Disini" required>
+              <input type="text" name="credit_image" class="form-control" value="<?=$d->credit_image?>">
               </div>
           </div>
 
