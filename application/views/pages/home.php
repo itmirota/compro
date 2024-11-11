@@ -117,7 +117,7 @@
             <!-- <h3 class="subjudul">Tentang Mirota</h3> -->
             <h3 class="judul">Lebih dari 50 Tahun Turut Serta Dalam Mencerdasakan Bangsa</h3>
             <p style="text-align:justify; font-size:16px">PT Mirota KSM merupakan perusahaan industri susu bubuk di Indonesia yang didirikan pada tahun <span>1973</span> oleh ibu <span>Tini Yuniarti</span> dan Bapak <span>Hendro Sutikno</span> beserta keluarga.</p>
-            <p style="text-align:justify; font-size:16px">Dengan visi perusahaan "Menjadi perusahaan produsen susu formula yang unggul di Indonesia dan menjadi perusahaan yang bermanfaat bagi masyaraka".</p>
+            <p style="text-align:justify; font-size:16px">Dengan visi perusahaan "Menjadi perusahaan produsen susu formula yang unggul di Indonesia dan menjadi perusahaan yang bermanfaat bagi masyarakat".</p>
             <a href="<?php echo base_url('tentangkami')?>" class="subjudul">Berkenalan dengan mirota ksm <i class="fa fa-angles-right"></i></a>
           </div>
         </div>
