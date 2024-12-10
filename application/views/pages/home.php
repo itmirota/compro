@@ -117,7 +117,7 @@
             <!-- <h3 class="subjudul">Tentang Mirota</h3> -->
             <h3 class="judul">Lebih dari 50 Tahun Turut Serta Dalam Mencerdasakan Bangsa</h3>
             <p style="text-align:justify; font-size:16px">PT Mirota KSM merupakan perusahaan industri susu bubuk di Indonesia yang didirikan pada tahun <span>1973</span> oleh ibu <span>Tini Yuniarti</span> dan Bapak <span>Hendro Sutikno</span> beserta keluarga.</p>
-            <p style="text-align:justify; font-size:16px">Dengan visi perusahaan "Menjadi perusahaan produsen susu formula yang unggul di Indonesia dan menjadi perusahaan yang bermanfaat bagi masyarakat".</p>
+            <p style="text-align:justify; font-size:16px">Dengan visi perusahaan "Menjadi perusahaan terkemuka di indonesia".</p>
             <a href="<?php echo base_url('tentangkami')?>" class="subjudul">Berkenalan dengan mirota ksm <i class="fa fa-angles-right"></i></a>
           </div>
         </div>
@@ -135,7 +135,7 @@
     <h2 class="separator mb-4">Produk Mirota</h2>
       <div class="d-flex flex-wrap">
         <div class="p-4 d-flex align-items-center col-md-6">
-          <div class="produk-text">
+          <div class="produ k-text">
           <h3 class="subjudul">Produk Kami</h3>
           <h3 class="judul">Susu Formula Untuk Semua Kalangan Usia</h3>
           <p style="text-align:justify">Mirota KSM menyediakan susu formula untuk segala usia mulai dari <span>Lactona ibu untuk ibu hamil, Lactona 1+ untuk 1-3 tahun, Lactona 3+ untuk 3 - 12 tahun, lactona skim dan prosteo plus untuk remaja, hingga prolansia untuk lansia</span>. Seluruh produk susu Mirota KSM diproses dengan menerapkan standar Good Manufacturing Practices (GMP) dan mengacu pada sistem jaminan mutu HACCP dan ISO 22000.</p>

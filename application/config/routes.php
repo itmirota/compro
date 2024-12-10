@@ -56,7 +56,7 @@ $route['artikel/(:any)'] = 'home/getArtikel/$1';
 $route['tambahKategori'] = 'artikel/saveKategori';
 $route['tambahArtikel'] = 'artikel/saveArtikel';
 
-$route['formulir'] = 'karir/formulir';
+$route['formulir/(:any)'] = 'karir/formulir/$1';
 $route['datapelamar'] = 'karir/datapelamar';
 
 

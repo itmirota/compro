@@ -39,7 +39,7 @@ class Karir extends BaseController
 
     public function formulir()
     {
-        $id_lowongan = $this->input->get('id');
+        $id_lowongan = $this->uri->segment(2);
         $getlowongan = $this->master_model->GetLowonganById($id_lowongan);
 
         foreach ($getlowongan as $getlowongan) {

@@ -55,7 +55,7 @@
             <div class="modal-body">
               <?= $ld->deskripsi ?>
               <div class="d-grid gap-2">
-                <a href="<?php echo base_url('formulir?id='.$ld->id_lowongan)?>" class="btn btn-cta">Apply</a>
+                <a href="<?php echo base_url('formulir/'.$ld->id_lowongan)?>" class="btn btn-cta">Apply</a>
               </div>
             </div>
           </div>
