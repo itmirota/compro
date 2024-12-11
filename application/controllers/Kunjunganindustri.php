@@ -409,7 +409,7 @@ class Kunjunganindustri extends BaseController
       ]
     ];
 
-    $sheet->setCellValue('B2', 'Laporan Kunjungan Ruangan PT. Mirota KSM'); // Set kolom A1 Sebagai Header
+    $sheet->setCellValue('B2', 'Laporan Kunjungan PT. Mirota KSM'); // Set kolom A1 Sebagai Header
     // $sheet->mergeCells('B2:E2'); // Set Merge Cell pada kolom A1 sampai E1
     
     $sheet->setCellValue('B3', 'No');
