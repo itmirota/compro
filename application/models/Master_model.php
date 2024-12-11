@@ -28,6 +28,19 @@ class Master_model extends CI_Model
         return $this->db->get('tbl_kunjungan_industri');
     }
 
+    function getdatakunjunganWhere($where){
+        $this->db->select('*, DATE(tgl_kunjungan) as date, TIME(tgl_kunjungan) as time');
+        $this->db->from('tbl_kunjungan_industri a');
+        $this->db->join('cities b','b.city_id = a.id_kab');
+        $this->db->join('provinces c','c.prov_id = a.id_prov');
+        $this->db->order_by('id_kunjungan','DESC');
+        $this->db->where($where);
+
+        $query = $this->db->get();
+
+        return $query->result();
+	}
+
     function GetLowonganById($id){
         $this->db->select('*');
         $this->db->from('tbl_lowongan');

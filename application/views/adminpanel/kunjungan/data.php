@@ -15,6 +15,9 @@
       <a style="margin-top:20px;" class="btn btn-blue" data-toggle="modal" data-target="#modal-add-kunjungan">
         Tambah Kunjungan
       </a>
+      <a style="margin-top:20px;" class="btn btn-blue" data-toggle="modal" data-target="#export-kunjungan">
+        export Kunjungan
+      </a>
 
       <ol class="breadcrumb">
         <li><a href="<?=base_url('dashboard')?>"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -331,6 +334,41 @@
                 </div>
                 <div class="modal-body">
                   <form id="detailkontakpic">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+
+          <!-- .Export Kunjungan ---->
+          <div class="modal fade" id="export-kunjungan">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Export Kunjungan</h4>
+                </div>
+                  <form action="<?=base_url('kunjunganindustri/exportKunjungan')?>" role="form" id="exportkunjungan" method="post">
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group mb-3">
+                          <label for="tgl_awal">Tanggal Awal</label>
+                            <input type="date" class="form-control" name="tgl_awal">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group mb-3">
+                          <label for="tgl_akhir">Tanggal Akhir</label>
+                            <input type="date" class="form-control" name="tgl_akhir">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <input type="submit" value="export" class="btn pull-right btn btn-success"></input>
+                    </div>
                   </form>
                 </div>
               </div>

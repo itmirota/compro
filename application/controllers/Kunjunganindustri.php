@@ -222,10 +222,10 @@ class Kunjunganindustri extends BaseController
   public function cetaksertifikat(){
       $nama = $this->uri->segment(3);
       if (empty($nama)) {
-          $gambar = "/1.jpg";
+          $gambar = "/sertifikat.jpg";
       }
-          else {
-          $gambar = "./sertifikat.jpg";
+        else {
+        $gambar = base_url('assets/images/mirotaksm.jpg');
       }
       $image = imagecreatefromjpeg($gambar);
       $white = imageColorAllocate($image, 255, 255, 255);
@@ -352,6 +352,145 @@ class Kunjunganindustri extends BaseController
 
 //       $this->loadViews("adminpanel/kunjungan/tambahtransaksi", $this->global, $data , NULL);
 //   }
+
+  public function exportKunjungan(){
+    $tgl_awal = $this->input->post('tgl_awal');
+    $tgl_akhir = $this->input->post('tgl_akhir');
+
+    $where = array(
+      'DATE(tgl_kunjungan) >=' => $tgl_awal,
+      'DATE(tgl_kunjungan) <=' => $tgl_akhir
+    );
+
+    $list_data = $this->master_model->getdatakunjunganWhere($where);
+
+    $spreadsheet = new Spreadsheet();
+    $sheet = $spreadsheet->getActiveSheet();
+
+    $style_col = [
+      'font' => ['bold' => true], // Set font nya jadi bold
+      'alignment' => [
+      'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER, // Set text jadi ditengah secara horizontal (center)
+      'vertical' => \PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER // Set text jadi di tengah secara vertical (middle)
+      ],
+      'borders' => [
+          'top' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN], // Set border top dengan garis tipis
+          'right' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN],  // Set border right dengan garis tipis
+          'bottom' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN], // Set border bottom dengan garis tipis
+          'left' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN] // Set border left dengan garis tipis
+      ]
+    ];
+
+    $styleRight = [
+      'font' => [
+        'bold' => true,
+      ],
+      'alignment' => [
+        'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_RIGHT,
+      ],
+      'borders' => [
+        'top' => [
+          'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+        ],
+      ],
+    ];
+        
+
+    // Buat sebuah variabel untuk menampung pengaturan style dari isi tabel
+    $style_row = [
+      'alignment' => [
+      'vertical' => \PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER // Set text jadi di tengah secara vertical (middle)
+      ],
+      'borders' => [
+      'top' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN], // Set border top dengan garis tipis
+      'right' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN],  // Set border right dengan garis tipis
+      'bottom' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN], // Set border bottom dengan garis tipis
+      'left' => ['borderStyle'  => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN] // Set border left dengan garis tipis
+      ]
+    ];
+
+    $sheet->setCellValue('B2', 'Laporan Kunjungan Ruangan PT. Mirota KSM'); // Set kolom A1 Sebagai Header
+    // $sheet->mergeCells('B2:E2'); // Set Merge Cell pada kolom A1 sampai E1
+    
+    $sheet->setCellValue('B3', 'No');
+    $sheet->setCellValue('C3', 'Tanggal');
+    $sheet->setCellValue('D3', 'Institusi');
+    $sheet->setCellValue('E3', 'Jurusan');
+    $sheet->setCellValue('F3', 'kabupaten');
+    $sheet->setCellValue('G3', 'provinsi');
+    $sheet->setCellValue('H3', 'alamat');
+    $sheet->setCellValue('I3', 'PIC');
+    $sheet->setCellValue('J3', 'Kontak PIC');
+    $sheet->setCellValue('K3', 'pengunjung');
+    $sheet->setCellValue('L3', 'pendamping');
+
+
+    $sheet->getStyle('B3')->applyFromArray($style_col);
+    $sheet->getStyle('C3')->applyFromArray($style_col);
+    $sheet->getStyle('D3')->applyFromArray($style_col);
+    $sheet->getStyle('E3')->applyFromArray($style_col);
+    $sheet->getStyle('F3')->applyFromArray($style_col);
+    $sheet->getStyle('G3')->applyFromArray($style_col);
+    $sheet->getStyle('H3')->applyFromArray($style_col);
+    $sheet->getStyle('I3')->applyFromArray($style_col);
+    $sheet->getStyle('J3')->applyFromArray($style_col);
+    $sheet->getStyle('K3')->applyFromArray($style_col);
+    $sheet->getStyle('L3')->applyFromArray($style_col);
+
+
+    $no = 1;
+    $numrow = 4;
+    foreach ($list_data as $ld) {
+
+      $sheet->setCellValue('B'.$numrow, $no);
+      $sheet->setCellValue('C'.$numrow, $ld->date);
+      $sheet->setCellValue('D'.$numrow, $ld->instansi);
+      $sheet->setCellValue('E'.$numrow, $ld->jurusan);
+      $sheet->setCellValue('F'.$numrow, $ld->city_name);
+      $sheet->setCellValue('G'.$numrow, $ld->prov_name);
+      $sheet->setCellValue('H'.$numrow, $ld->alamat);
+      $sheet->setCellValue('I'.$numrow, $ld->nama);
+      $sheet->setCellValue('J'.$numrow, $ld->no_hp);
+      $sheet->setCellValue('K'.$numrow, $ld->jml_pengunjung);
+      $sheet->setCellValue('L'.$numrow, $ld->jml_pendamping);
+
+      $sheet->getColumnDimension('C')->setAutoSize(true);
+      $sheet->getColumnDimension('D')->setAutoSize(true);
+      $sheet->getColumnDimension('E')->setAutoSize(true);
+      $sheet->getColumnDimension('F')->setAutoSize(true);
+      $sheet->getColumnDimension('G')->setAutoSize(true);
+      $sheet->getColumnDimension('H')->setAutoSize(true);
+      $sheet->getColumnDimension('I')->setAutoSize(true);
+      $sheet->getColumnDimension('J')->setAutoSize(true);
+      $sheet->getColumnDimension('K')->setAutoSize(true);
+      $sheet->getColumnDimension('L')->setAutoSize(true);
+  
+      $sheet->getStyle('B'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('C'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('D'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('E'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('F'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('G'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('H'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('I'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('J'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('K'.$numrow)->applyFromArray($style_row);
+      $sheet->getStyle('L'.$numrow)->applyFromArray($style_row);
+
+      $no++;
+      $numrow++;
+    }
+
+
+    $writer = new Xlsx($spreadsheet);
+    header('Content-Type: application/vnd.ms-excel');
+
+    header('Content-Disposition: attactchment;filename= Laporan peserta kunjungan '.$tgl_awal.' - '.$tgl_akhir.'.xlsx');
+
+    header('Cache-Control: max-age=0');
+    $writer->save("php://output");
+    exit();
+  }
 
   public function infoKunjungan(){
     $this->global['pageTitle'] = 'Mirota KSM | Info Kunjungan Industri';
