@@ -54,6 +54,7 @@ class Master_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_pelamar a');
         $this->db->join('tbl_lowongan b','b.id_lowongan = a.lowongan_id');
+        $this->db->order_by('id_pelamar','DESC');
         $query = $this->db->get();
 
         return $query->result();
@@ -138,6 +139,24 @@ class Master_model extends CI_Model
         $this->db->limit(5);
         $query = $this->db->get();
     
+        return $query->result();
+    }
+
+    function GetMaklon($where){
+        $this->db->select('*');
+        $this->db->from('tbl_maklon a');
+        $this->db->join('tbl_maklon_kategoriproduk b','b.id_maklon_kategoriproduk = a.kategoriproduk_maklon_id');
+        $this->db->join('districts c','c.dis_id = a.kecamatan');
+        $this->db->join('cities d','d.city_id = a.kabupaten');
+        $this->db->join('provinces e','e.prov_id = a.provinsi');
+        $this->db->order_by('id_maklon','DESC');
+
+        if(isset($where)){
+        $this->db->where($where);
+        }
+
+        $query = $this->db->get();
+
         return $query->result();
     }
 }

@@ -2,11 +2,12 @@
 
 <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Company Profile</b> PT. Mirota KSM | Version 1.0
+          <b>Company Profile</b> | Version 2.0
         </div>
-        <strong>Copyright &copy; IT Mirota 2022 <a href="<?php echo base_url(); ?>">PT Mirota KSM</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; IT Mirota 2024 <a href="<?php echo base_url(); ?>">PT Mirota KSM</a>.</strong> All rights reserved.
     </footer>
-    <!-- jQuery 3 -->
+
+<!-- jQuery 3 -->
 <script src="<?php echo base_url(); ?>assets/adminlte2/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?php echo base_url(); ?>assets/adminlte2/bower_components/jquery-ui/jquery-ui.min.js"></script>
@@ -39,7 +40,7 @@
 <!-- FastClick -->
 <script src="<?php echo base_url(); ?>assets/adminlte2/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo base_url(); ?>assets/adminlte2/dist/js/adminlte.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/adminlte2/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/adminlte2/dist/js/demo.js"></script>
 <!-- page script -->

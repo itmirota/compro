@@ -58,7 +58,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo base_url(); ?>" class="logo">
+        <a href="<?php echo base_url('dashboard'); ?>" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>KSM</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -67,7 +67,7 @@
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
           <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
           </a>
           <div class="navbar-custom-menu">
@@ -75,8 +75,7 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-sign-out hidden-md hidden-lg"> log out</i>
-                  <span class="hidden-xs"><?php echo $name; ?></span>
+                  <i class="fa fa-user"> <?php echo $name; ?></i>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -114,42 +113,54 @@
             </li>
 
             <?php if($role == ROLE_ADMIN | $role == ADMIN_HRD) { ?>
-            <li class="header">Karir</li>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>datalowongan">
-                <i class="fa  fa-file"></i>
-                <span>Data Lowongan Kerja</span>
+              <a href="#">
+                <i class="fa fa-user-plus"></i> <span>Karir</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
-            </li>
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>datapelamar">
-                <i class="fa fa-user-plus"></i>
-                <span>Data Pelamar</span>
-              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>datalowongan">
+                    <i class="fa  fa-file"></i>
+                    <span>Data Lowongan Kerja</span>
+                  </a>
+                </li>
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>datapelamar">
+                    <i class="fa fa-user-plus"></i>
+                    <span>Data Pelamar</span>
+                  </a>
+                </li>
+              </ul>
             </li>
             <?php } ?>
 
             <?php if($role == ROLE_ADMIN | $role == ADMIN_KUNJUNGAN) { ?>
-            <li class="header">Kunjungan Industri</li>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>datakunjungan">
-                <i class="fa fa-industry"></i>
-                <span>Data Kunjungan</span>
+              <a href="#">
+                <i class="fa fa-child"></i> <span>Kunjungan Industri</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
-            </li>
-            
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>list-kunjungan">
-                <i class="fa fa-industry"></i>
-                <span>Data info Kunjungan</span>
-              </a>
-            </li>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>datakunjungan">
+                    <i class="fa fa-list-alt"></i>
+                    <span>Data Kunjungan</span>
+                  </a>
+                </li>
+                
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>list-kunjungan">
+                    <i class="fa fa-info-circle"></i>
+                    <span>info Area Kunjungan</span>
+                  </a>
+                </li>
 
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>hasil-kuisioner-kunjungan">
-                <i class="fa fa-file-text"></i>
-                <span>Data Hasil Kuisioner</span>
-              </a>
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>hasil-kuisioner-kunjungan">
+                    <i class="fa fa-file-text"></i>
+                    <span>Hasil Kuisioner</span>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="treeview">
@@ -160,6 +171,30 @@
             </li>
             <?php } ?>
 
+            <?php if($role == ROLE_ADMIN ) { ?>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-building-o"></i> <span>Maklon</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>maklon/kategori_produk">
+                    <i class="fa fa-list"></i>
+                    <span>Kategori Produk</span>
+                  </a>
+                </li>
+                
+                <li class="treeview">
+                  <a href="<?php echo base_url(); ?>maklon/datamaklon">
+                    <i class="fa fa-industry"></i>
+                    <span>Data Maklon</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <?php } ?>
+
+            <?php if($role == ROLE_ADMIN) { ?>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>dataproduk">
                 <i class="fa fa-file-text"></i>
@@ -167,7 +202,6 @@
               </a>
             </li>
           
-            <?php if($role == ROLE_ADMIN) { ?>
             <li class="header">User Management</li>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>userListing">
