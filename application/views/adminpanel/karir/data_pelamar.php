@@ -42,12 +42,13 @@
               <h3 class="box-title"><strong>Data Pelamar</strong></h3>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">  
+            <div class="box-body table-resposive">  
               <!-- .tabel release -->
               <table id="release" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
+                  <th>Tanggal Melamar</th>
                   <th>Nama Pelamar</th>
                   <th>Posisi</th>
                   <th>Domisili</th>
@@ -63,6 +64,7 @@
                 <?php foreach($list_data as $ld): ?>
                 <tr>
                     <td><?=$no?></td>
+                    <td><?=mediumdate_indo($ld->date)?></td>
                     <td><?=$ld->nama_pelamar?></td>
                     <td><?=$ld->nama_lowongan?></td>
                     <td><?=$ld->alamat_pelamar?></td>

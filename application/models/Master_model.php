@@ -51,7 +51,7 @@ class Master_model extends CI_Model
     }
 
     function GetDataPelamar(){
-        $this->db->select('*');
+        $this->db->select('*,DATE(datecreated) as date');
         $this->db->from('tbl_pelamar a');
         $this->db->join('tbl_lowongan b','b.id_lowongan = a.lowongan_id');
         $this->db->order_by('id_pelamar','DESC');
