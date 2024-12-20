@@ -40,17 +40,13 @@ class Karir extends BaseController
     public function formulir()
     {
         $id_lowongan = $this->uri->segment(2);
-        $getlowongan = $this->master_model->GetLowonganById($id_lowongan);
-
-        foreach ($getlowongan as $getlowongan) {
-            $nama_lowongan = $getlowongan->nama_lowongan;
-        }
+        $lowongan = $this->master_model->GetRowLowonganById($id_lowongan);
 
         $this->global['pageTitle'] = 'Mirota KSM | Formulir';
 
         $data = array(
             'id_lowongan' => $id_lowongan,
-            'nama_lowongan' => $nama_lowongan
+            'nama_lowongan' => $lowongan->nama_lowongan
         );
         
         $this->loadPageViews("pages/form_lowongan", $this->global,$data, NULL);

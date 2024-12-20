@@ -50,6 +50,15 @@ class Master_model extends CI_Model
         return $query->result();
     }
 
+    function GetRowLowonganById($id){
+        $this->db->select('*');
+        $this->db->from('tbl_lowongan');
+        $this->db->where('id_lowongan',$id);
+        $query = $this->db->get();
+
+        return $query->row();
+    }
+
     function GetDataPelamar(){
         $this->db->select('*,DATE(datecreated) as date');
         $this->db->from('tbl_pelamar a');
