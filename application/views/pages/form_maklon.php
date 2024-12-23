@@ -6,7 +6,7 @@
     </div> -->
 
     <div class="row">
-        <p class="paragraf">Kami menerima siapa pun, baik personal maupun grup dtanpa batasan usia, untuk datang dan mengunjungi pabrik kami dari Senin hingga Jumat pada jam yang telah ditentukan. Silakan mengisi form di bawah dan pastikan Anda sudah meng-klik tombol Submit. Tim Kami akan segera menghubungi Anda segera setelah Anda melakukan reservasi.</p>
+        <p class="paragraf">Silakan mengisi form di bawah. Tim Kami akan segera menghubungi Anda segera setelah Anda melakukan pengisian formulir.</p>
         <div class="row">
             <div class="col-md-12">
                 <h2 class="myH2">Formulir Pendaftaran Maklon</h2>
@@ -75,7 +75,7 @@
                                     <option selected> -pilih Sumber Info-</option>
                                     <option value="iklan"> Iklan</option>
                                     <option value="website"> Website</option>
-                                    <option value="kerabat"> Kerabat</option>
+                                    <option value="kerabat"> Kerabat/rekan kerja</option>
                                     <option value="sales"> Sales</option>
                                 </select>
                                 <label for="sumber_info">Sumber Info</label>

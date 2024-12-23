@@ -79,6 +79,8 @@ $route['kalenderkunjungan'] = 'kunjunganindustri/kalender';
 $route['privasi'] = 'home/privasi';
 $route['syaratketentuan'] = 'home/syaratKetentuan';
 
+$route['formulir-maklon'] = 'maklon/formulir';
+
 
 
 /*********** USER DEFINED ROUTES *******************/

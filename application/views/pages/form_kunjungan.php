@@ -70,6 +70,22 @@
                                 <label for="no_hp">Nomor Telp</label>
                             </div>
 
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="sumber_info" name="sumber_info" required>
+                                    <option selected> -pilih Sumber Info-</option>
+                                    <option value="iklan"> Iklan</option>
+                                    <option value="website"> Website</option>
+                                    <option value="kerabat"> Kerabat/rekan kerja</option>
+                                    <option value="tim"> Tim Mirota KSM</option>
+                                </select>
+                                <label for="sumber_info">Mengetahui Informasi Kunjungan dari?</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3" id="sumber_person">
+                                <input type="text" class="form-control" name="sumber_person">
+                                <label for="sumber_person">Nama Tim Mirota KSM</label>
+                            </div>
+
                         </div>
                         <div class="col-md-6">     
                             
@@ -147,9 +163,22 @@
 <script>
     $(document).ready(function(){
         $("#id_kabupaten").hide();
-
+        $("#sumber_person").hide();
+        sumberperson();
         loadkabupaten();
     });
+
+    function sumberperson(){
+    $("#sumber_info").change(function(){
+        var sumber_info = $("#sumber_info").val(); 
+
+        if (sumber_info == 'tim'){
+            $("#sumber_person").show();
+        }else{
+            $("#sumber_person").hide();
+        };
+    });
+    } 
 
     function loadkabupaten(){
     $("#id_provinsi").change(function(){

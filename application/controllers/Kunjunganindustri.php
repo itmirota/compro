@@ -86,6 +86,7 @@ class Kunjunganindustri extends BaseController
       $alamat = $this->input->post('alamat');
       $jml_pengunjung = $this->input->post('jml_pengunjung');
       $jml_pendamping = $this->input->post('jml_pendamping');
+      $sumber_info = $this->input->post('sumber_info');
 
       $data = array(
         'tgl_kunjungan' => $tgl_kunjungan,
@@ -101,6 +102,8 @@ class Kunjunganindustri extends BaseController
         'alamat' => $alamat,
         'jml_pengunjung' => $jml_pengunjung,
         'jml_pendamping' => $jml_pendamping,
+        'sumber_info' => $sumber_info,
+        'datecreated' => DATE('Y-m-d'),
       );
     } else {
 

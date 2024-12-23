@@ -110,7 +110,7 @@
           <p class="paragraf">
           Ingin punya produk dengan brand anda sendiri? konsultasikan ide hebatmu kepada kami, kami akan bantu mewujudkannya.
           </p>
-          <a href="https://wa.me/6285136118816" target="_blank" class="btn btn-cta"> Sampaikan Idemu</a>
+          <a href="<?= base_url('formulir-maklon') ?>"  class="btn btn-cta"> Sampaikan Idemu</a>
         </div>
       </div>
     </div>
