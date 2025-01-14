@@ -78,7 +78,11 @@ body{
 }
 
 .img-carousel{
-  height:100vh;
+  height:auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Container holding the image and the text */

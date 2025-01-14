@@ -163,9 +163,12 @@ class Kunjunganindustri extends BaseController
   }
 
   public function updateStatus(){
-    $id_bahan_sample = $this->uri->segment(2);
-    $status = $this->uri->segment(3);
+    $id_kunjungan = $this->uri->segment(3);  
+    $status = $this->uri->segment(4);
 
+    $query = $this->crud_model->update(['id_kunjungan' => $id_kunjungan],['status' => $status],'tbl_kunjungan_industri');
+
+    redirect('datakunjungan');
   }
 
   public function detailkunjungan($id) {
@@ -251,24 +254,24 @@ class Kunjunganindustri extends BaseController
   }
 
   public function edittanggalkunjungan(){
-      $id_kunjungan = $this->input->post('id_kunjungan');
-      $tgl_kunjungan = $this->input->post('tgl_kunjungan');
+    $id_kunjungan = $this->input->post('id_kunjungan');
+    $tgl_kunjungan = $this->input->post('tgl_kunjungan');
 
-      $where = array(
-          'id_kunjungan' => $id_kunjungan
-      );
+    $where = array(
+        'id_kunjungan' => $id_kunjungan
+    );
 
-      $data = array(
-          'tgl_kunjungan' => $tgl_kunjungan
-      );
+    $data = array(
+        'tgl_kunjungan' => $tgl_kunjungan
+    );
 
-      $sql = $this->crud_model->update($where,$data,'tbl_kunjungan_industri');
-      if (empty($sql)){
-          $this->set_notifikasi_swal('success','Berhasil','Data Berhasil Diupdate');
-        }else{
-          $this->set_notifikasi_swal('error','Gagal','Data Gagal Disimpan');
-        }
-      redirect('datakunjungan');
+    $sql = $this->crud_model->update($where,$data,'tbl_kunjungan_industri');
+    if (empty($sql)){
+      $this->set_notifikasi_swal('success','Berhasil','Data Berhasil Diupdate');
+    }else{
+      $this->set_notifikasi_swal('error','Gagal','Data Gagal Disimpan');
+    }
+    redirect('datakunjungan');
   }
 
 //   public function detailprodukkunjungan($id) {

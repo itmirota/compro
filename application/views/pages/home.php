@@ -31,7 +31,7 @@
 </style>
 
 <!--CAROUSEL DESKTOP-->
-<div id="carouselExampleInterval" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide d-none d-md-block d-lg-block" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
         <img src="<?php echo base_url().'assets/landingpage/images/lactonaskim_desktop1.webp'?>" class="d-block w-100 img-carousel">
@@ -52,7 +52,7 @@
 <!--CAROUSEL DESKTOP-->
 
 <!--CAROUSEL MOBILE-->
-<div id="carouselMobile" class="carousel slide d-block d-lg-none" data-bs-ride="carousel">
+<div id="carouselMobile" class="carousel d-block d-sm-block d-md-none" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
     <img src="<?php echo base_url().'assets/landingpage/images/lactonaskim_mobile1.webp'?>" class="d-block w-100 img-carousel">

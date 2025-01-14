@@ -90,7 +90,7 @@ class Master_model extends CI_Model
     function GetdataLowongan(){
     $this->db->select('*, DATEDIFF(tgl_akhir,NOW()) as selisih');
     $this->db->from('tbl_lowongan');
-    $this->db->where('DATEDIFF(tgl_akhir,NOW()) > 0');
+    $this->db->where('DATEDIFF(tgl_akhir,NOW()) >= 0');
     $query = $this->db->get();
 
     return $query->result();
