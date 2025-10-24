@@ -49,11 +49,6 @@
                 </div>
 
                 <div class="col-md-6">
-                    
-                    <!-- <div class="form-floating mb-3">
-                        <input type="file" class="form-control" name="file_surat" id="file_surat" required>
-                        <label for="floatingInput">Surat Lamaran(pdf)</label>
-                    </div> -->
 
                     <div class="form-floating mb-3">
                         <input type="file" class="form-control" name="file_cv" id="file_cv" required>
