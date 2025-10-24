@@ -228,6 +228,9 @@
         chartY.push(data.countIp);
       });
 
+      console.log(chartX);
+      console.log(chartY);
+
       const chartData = {
         labels: chartX,
         datasets: [{

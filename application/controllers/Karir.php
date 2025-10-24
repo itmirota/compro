@@ -211,7 +211,7 @@ class Karir extends BaseController
                 'alamat_pelamar' => $alamat,
                 'email_pelamar' => $email,
                 'no_wa' => $no_wa,
-                'file_surat' => $file_surat,
+                'file_surat' => '',
                 'file_cv' => $file_cv,
                 'file_ijazah' => $file_ijazah,
                 'file_lampiran' => $file_lampiran,
